@@ -79,12 +79,13 @@ WSGI_APPLICATION = "sql_backend.wsgi.application"
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'template1',
-        'USER': 'harjyotbadh',
-        'PASSWORD': 'password',
-        'HOST': 'localhost',
-        'PORT': '5433',
+        'ENGINE': 'django.db.backends.postgresql', # django.db.backends.postgresql
+        'NAME': 'postgres', # template1
+        'USER': 'postgres', # harjyotbadh
+        'PASSWORD': 'PASSWORD', # 
+        'HOST': '/cloudsql/neat-simplicity-415116:us-central1:template1', # localhost
+        'PORT': '5432', # 5433
+        'ISOLATION_LEVEL': 'READ COMMITTED', # READ COMMITTED
     }
 }
 
@@ -118,3 +119,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # CORS
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ORIGIN_ALLOW_ALL = True
+
+ALLOWED_HOSTS = ['backend-dot-neat-simplicity-415116.uc.r.appspot.com', 'frontend-dot-neat-simplicity-415116.uc.r.appspot.com']
+
+# 9{iC3R}<=9Y07B(m # password
+
